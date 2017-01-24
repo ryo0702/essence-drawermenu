@@ -11,13 +11,20 @@
 	<meta name="twitter:title" content="Essence Drawermenu" />
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="jquery.es-drawermenu.js"></script>
+  <script type="text/javascript" src="functions.js"></script>
   <link rel="stylesheet" href="jquery.es-drawermenu.min.css">
   <link rel="stylesheet" href="style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 </head>
 <body>
 
 <header class="navbar">
-  <h1 class="logo"><a href="#">logo</a></h1>
+  <h1 class="logo"><a href="#">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 111.6 116.4" style="enable-background:new 0 0 111.6 116.4;" xml:space="preserve">
+      <g><path d="M44,116.4l2.7-43L11.6,97L0,76.9l38.1-18.6L0,39.4l11.6-19.7l35.1,23.5L44,0h23.3l-3.3,43.2L100,19.7l11.6,19.7L73.4,58.3
+      		l38.2,18.6L100,97L64.1,73.4l3.3,43H44z"/></g></svg>
+  </a></h1>
   <div class="menu-left">
     <svg version="1.1" class="hamburger drawer-toggle" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 302 212.9" style="enable-background:new 0 0 302 212.9;" xml:space="preserve">
@@ -288,13 +295,88 @@
 </svg>
     </div>
 
+    <div class="download-buttons">
+      <a href="https://github.com/ryo0702/essence-drawermenu/archive/master.zip">Download</a>
+    </div>
+
     <header>
-      <h1></h1>
+      <h1>Essence Drawermenu</h1>
+      <p>It's simple drawer menu create with jQuery.<br />
+        This plugin is made using SVG and Stylus. So, customization such as color can be easily done with CSS.</p>
     </header>
 
+    <section>
+      <h2>Getting started</h2>
+      <h3>Download Essence Drawermenu</h3>
+      <p>Download from <a href="https://github.com/ryo0702/essence-drawermenu/archive/master.zip">Github</a>.<br />
+        Load CSS and JS files contained in the downloaded file.</p>
+      <div class="codes">
+        <div class="code"><script type="text/javascript" src="jquery.js"></script>
+          <script type="text/javascript" src="jquery.es-drawermenu.js"></script>
+          <link rel="stylesheet" href="jquery.es-drawermenu.min.css">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Configuration</h2>
+      <p>Describe .navbar and .drawermenu.</p>
+      <p>.navbar</p>
+      <div class="codes">
+        <div class="code"><header class="navbar">
+            <h1 class="logo"><a href="#">Logo</a></h1>
+            <div class="menu-left">
+              <svg version="1.1" class="hamburger drawer-toggle" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          	 y="0px" viewBox="0 0 302 212.9" style="enable-background:new 0 0 302 212.9;" xml:space="preserve">
+                <g><rect width="302" height="26.3" /></g>
+                <g><rect y="93.3" width="302" height="26.3"/></g>
+                <g><rect y="186.7" width="302" height="26.3"/></g>
+              </svg>
+            </div>
+            <div class="menu-right"></div>
+          </header>
+        </div>
+      </div>
+
+      <p>.drawermenu</p>
+      <div class="codes">
+        <div class="code"><nav class="drawermenu">
+          <ul>
+            <li><a href="a.html">Home</a></li>
+            <li>
+              <a href="a.html">Down</a>
+              <ul>
+                <li><a href="a.html">Under1</a></li>
+                <li><a href="a.html">Under2</a></li>
+                <li><a href="a.html">Under3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+          </ul>
+          <div class="drawer-toggle">Close</div>
+        </nav>
+        </div>
+      </div>
+
+      <p>Then set up the plugin.</p>
+      <div class="codes"><div class="code">$(document).ready(function() {
+        $('.drawermenu').drawermenu({
+          speed:100,
+          position:'left'
+        });
+      });
+      </div>
+      </div>
+
+      <p>If position: right, draw from the right.<br />
+        Also, changing the value of speed will change the speed of the drawer.</p>
+    </section>
 
   </article>
 </main>
+
+<footer>Essence Drawermenu Ver 0.0.2<br />Released under the MIT license.</footer>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -302,6 +384,7 @@ $(document).ready(function() {
     speed:100,
     position:'left'
   });
+  codes();
 });
 </script>
 </body>

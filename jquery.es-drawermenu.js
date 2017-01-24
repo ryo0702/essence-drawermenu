@@ -72,6 +72,6 @@
 
   $.fn.drawermenu.defaults = {
     speed: 150,
-    position:left
+    position:"left"
   };
 })(jQuery);

@@ -1,3 +1,10 @@
+/* Essence Drawermenu
+copyright 2016, Essence Webservice Ryo Inagaki
+http://essencews.com
+https://ryo0702.github.io/essence-drawermenu/
+released under the MIT license
+*/
+
 ;(function($) {
   $.fn.drawermenu = function(options) {
 

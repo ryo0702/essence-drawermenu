@@ -1,4 +1,4 @@
-/* Essence Drawermenu
+/* Essence Drawermenu v 1.0.3
 copyright 2016, Essence Webservice Ryo Inagaki
 http://essencews.com
 https://ryo0702.github.io/essence-drawermenu/
@@ -30,7 +30,7 @@ released under the MIT license
 
     $(document).on("click",'.drawer-toggle',function(){
       if(status == false){
-        $('body').append('<div class="drawermenu_overlay"></div>');
+        $(".drawermenu-overlay").show();
         if(menu_position == 'left'){
           $(drawermenu).animate({
             'left':'0px'
@@ -55,11 +55,11 @@ released under the MIT license
           },opts.speed);
         }
         status = false;
-        $("body > .drawermenu_overlay").remove();
+        $(".drawermenu-overlay").hide();
       }
     });
 
-    $(document).on("click",'.drawermenu_overlay',function(){
+    $(document).on("click",'.drawermenu-overlay,.drawermenu-close',function(){
       if(status == true){
         if(menu_position == 'left'){
           $(drawermenu).animate({
@@ -72,7 +72,7 @@ released under the MIT license
           },opts.speed);
         }
         status = false;
-        $("body > .drawermenu_overlay").remove();
+        $(".drawermenu-overlay").hide();
       }
     });
   }

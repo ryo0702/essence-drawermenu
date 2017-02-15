@@ -1,7 +1,7 @@
 .navbar
   width 100%
   height 50px
-  background-color menu_bgc
+  background-color drawer_menu_bgc
   display flex
   display -webkit-flex
   flex-direction row
@@ -10,7 +10,7 @@
   -webkit-flex-wrap nowrap
   justify-content space-between
   -webkit-justify-content space-between
-  color menu_color
+  color drawer_menu_color
   margin 0
   padding 0
   .logo
@@ -20,12 +20,12 @@
     line-height 100%
     font-size 18px
     line-height 50px
-    color menu_color
+    color drawer_menu_color
     a
-      color menu_color
+      color drawer_menu_color
       text-decoration none
       &:hover
-        color darken(menu_color,12)
+        color darken(drawer_menu_color,12)
       img,svg
         height 20px
         line-height 100%
@@ -35,7 +35,7 @@
       svg
         path
           vertical-align bottom
-          fill menu_color
+          fill drawer_menu_color
   .menu-left,.menu-right
     display block
     height 17px
@@ -58,13 +58,13 @@
   .hamburger
     height 20px
     rect
-      fill menu_color
+      fill drawer_menu_color
     &:hover
       rect
-        fill darken(menu_color,12)
+        fill darken(drawer_menu_color,12)
 
 .drawermenu
-  background-color menu_bgc
+  background-color drawer_menu_bgc
   position fixed
   left -250px
   top 0
@@ -95,11 +95,11 @@
         -o-box-sizing border-box
         -ms-box-sizing border-box
         box-sizing border-box
-        color menu_color
-        background-color menu_bgc
+        color drawer_menu_color
+        background-color drawer_menu_bgc
         border-bottom solid 1px alpha(#FFF,0.1)
         .icon-down
-          fill menu_color
+          fill drawer_menu_color
           width 8px
           margin-left 10px
       & > ul
@@ -111,7 +111,7 @@
           & > a
             display block
             font-size 13px
-            color menu_color
+            color drawer_menu_color
             padding 5px 15px
             text-decoration none
 

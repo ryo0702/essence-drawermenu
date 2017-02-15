@@ -1,4 +1,4 @@
-/* Essence Drawermenu v 1.0.3
+/* Essence Drawermenu v 1.0.4
 copyright 2016, Essence Webservice Ryo Inagaki
 http://essencews.com
 https://ryo0702.github.io/essence-drawermenu/
